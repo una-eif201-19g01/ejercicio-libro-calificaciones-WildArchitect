@@ -17,9 +17,28 @@
 #ifndef LIBROCALIFICACIONES_LIBROCALIFICACIONES_H
 #define LIBROCALIFICACIONES_LIBROCALIFICACIONES_H
 
+#include <string>
 
-class LibroCalificaciones {
+class LibroCalificaciones 
+{
+	std::string nombreCurso;
+	int nota;
+	std::string obtenerRangoLetra();
 
+public:
+	LibroCalificaciones();
+	LibroCalificaciones(const std::string &nombreCurso; int nota);
+
+	//Metodos
+	std::string obtenerMensaje();
+	//GET
+	const std::string &getNombreCurso() const;
+	//SET
+	void setNombreCurso(const std::string &nombreCurso);
+	//GET 
+	int getNota() const;
+	//SET
+	void setNota(int nota);
 };
 
 
